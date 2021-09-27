@@ -1,0 +1,6 @@
+.DS_Store
+terraform/.terraform/
+terraform/*.plan
+terraform/.keys
+project_orderbird
+.ini
