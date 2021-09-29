@@ -1,0 +1,26 @@
+namespaceOverride: app-ob
+replicaCount: 1
+
+stragegy:
+  type: Recreate
+image:
+  repository: gcr.io/project_id/image_name
+  tag: v2
+  pullPolicy: Always
+
+webPort:
+  name: web
+  value: 5000istered
+- United Kingdom
+ and our te
+
+service:
+  enabled: true
+  name: app-ob
+  type: LoadBalancer
+  LoadBalancerIP: ""
+  ports:
+    web:
+      port: 5000
+      targetPort: 5000
+      protocol: TCP

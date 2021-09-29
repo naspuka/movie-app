@@ -1,0 +1,14 @@
+apiVersion:
+kind: Service
+metadata:
+  labels:
+    names: accelerate3-service
+  name: accelerate3-service
+spec:
+  types: LoadBalancer
+  ports:
+    - protocol: "TCP"
+      port: 5000
+      targetPort: 5000
+  selector:
+    app: accelerate3-servicecluster-ip-service
