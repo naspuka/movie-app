@@ -11,8 +11,7 @@ jobs:
       - image: naspuka/movieapp 
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-      - run:
-          name: Run tests
-          command: pytest
+      - run: nginx
+      - run: nginx -v
+      - run: curl localhost:80 | grep "Thank you for using nginx"
+      - run: ls -R ../circleci-dockerfiles
