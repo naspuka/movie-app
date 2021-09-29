@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  python: circleci/python@1.2
+workflows:
+  sample:  
+    jobs:
+      - build-and-test
+jobs:
+  build-and-test:
+    docker:
+      - image: naspuka/movieapp 
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Run tests
+          command: pytest
